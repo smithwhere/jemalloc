@@ -5,5 +5,6 @@ tar -xf jemalloc-5.3.0.tar
 cd jemalloc-5.3.0
 ./autogen.sh
 ./configure --prefix=/usr/local/jemalloc-5.3.0
-make
-make install
+make && make install
+echo '/usr/local/lib' > /etc/ld.so.conf.d/local.conf
+ldconfig
