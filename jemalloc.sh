@@ -1,11 +1,9 @@
-apt install -y bzip2 autoconf automake libtool make
+apt install -y bzip2 autoconf automake libtool make autogen autoconf
 wget https://github.com/smithwhere/jemalloc/releases/download/jemalloc/jemalloc-5.3.0.tar.bz2
 bzip2 -d jemalloc-5.3.0.tar.bz2
 tar -xf jemalloc-5.3.0.tar
 cd jemalloc-5.3.0
-sudo apt-get install autogen autoconf
 ./autogen.sh
-./configure --enable-autogen --auto--prefix=/usr/local/jemalloc-5.3.0
 make && make install
 sudo ldconfig
 cd ..
