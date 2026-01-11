@@ -4,6 +4,7 @@ bzip2 -d jemalloc-5.3.0.tar.bz2
 tar -xf jemalloc-5.3.0.tar
 cd jemalloc-5.3.0
 ./autogen.sh
+./configure --prefix=/usr/local/jemalloc-5.3.0
 make && make install
 sudo ldconfig
 cd ..
