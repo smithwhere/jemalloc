@@ -5,6 +5,6 @@ tar -xf jemalloc-5.3.0.tar
 cd jemalloc-5.3.0
 ./autogen.sh
 ./configure
-make -j2 && make install
+make -j $(nproc) && make install
 ldconfig
 cd ..
